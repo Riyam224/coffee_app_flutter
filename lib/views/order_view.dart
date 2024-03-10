@@ -1,16 +1,22 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last
 
-import 'dart:ffi';
-
 import 'package:coffee_app/views/detail_view.dart';
 import 'package:coffee_app/views/order_map.dart';
+import 'package:coffee_app/views/payment_details.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class OrderView extends StatelessWidget {
+class OrderView extends StatefulWidget {
   const OrderView({super.key});
 
+  @override
+  State<OrderView> createState() => _OrderViewState();
+}
+
+class _OrderViewState extends State<OrderView> {
+  // todo
+  late int quantity = 1;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -73,13 +79,21 @@ class OrderView extends StatelessWidget {
                       color: Color(0xffF2F2F2),
                     ),
                     child: Center(
-                      child: Text(
-                        'Track it',
-                        style: TextStyle(
-                            color: Color(0xff2F2D2C),
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'Sora'),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return OrderMap();
+                          }));
+                        },
+                        child: Text(
+                          'Track it',
+                          style: TextStyle(
+                              color: Color(0xff2F2D2C),
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Sora'),
+                        ),
                       ),
                     ),
                   ),
@@ -193,21 +207,27 @@ class OrderView extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              quantity--;
+                            },
                             child: Icon(
                               Icons.remove,
                             ),
                           ),
                           SizedBox(width: 5),
                           Text(
-                            '1',
+                            '$quantity',
                             style: TextStyle(
                               fontSize: 20,
                             ),
                           ),
                           SizedBox(width: 5),
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              setState(() {
+                                quantity++;
+                              });
+                            },
                             child: Icon(
                               Icons.add,
                             ),
@@ -314,7 +334,7 @@ class OrderView extends StatelessWidget {
             GestureDetector(
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return OrderMap();
+                  return PaymenetDetails();
                 }));
               },
               child: Container(
