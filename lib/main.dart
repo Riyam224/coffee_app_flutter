@@ -1,4 +1,5 @@
 import 'package:coffee_app/views/home_view.dart';
+import 'package:coffee_app/views/order_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class CoffeeApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeView(),
+      home: OrderView(),
     );
   }
 }

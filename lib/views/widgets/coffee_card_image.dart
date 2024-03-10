@@ -33,7 +33,7 @@ class CoffeeCardImage extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  '10.99',
+                  '4.53',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 13,
