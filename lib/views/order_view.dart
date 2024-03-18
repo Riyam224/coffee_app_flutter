@@ -195,7 +195,11 @@ class _OrderViewState extends State<OrderView> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 20),
-                  child: Image.asset('assets/images/Rectangle 1706e.png'),
+                  child: Image.asset(
+                    'assets/images/9.jpg',
+                    width: 50,
+                    height: 50,
+                  ),
                 ),
                 Column(
                   children: [

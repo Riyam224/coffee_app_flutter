@@ -6,15 +6,15 @@ class CoffeeCardView extends StatelessWidget {
   CoffeeCardView({super.key});
 
   List<String> imageList = [
-    'assets/images/1.jpg',
+    'assets/images/9.jpg',
     'assets/images/2.jpg',
     'assets/images/3.jpg',
     'assets/images/5.jpg',
     'assets/images/5a.jpg',
     'assets/images/7.jpg',
-    'assets/images/9.jpg',
-    'assets/images/10.jpg',
     'assets/images/1.jpg',
+    'assets/images/10.jpg',
+    'assets/images/9.jpg',
     'assets/images/2.jpg',
     'assets/images/3.jpg',
     'assets/images/5.jpg',
@@ -24,8 +24,8 @@ class CoffeeCardView extends StatelessWidget {
     'assets/images/10.jpg',
   ];
   List<String> coffeeList = [
-    'Macchiato',
     'Cappuccino',
+    'Macchiato',
     'Doppio',
     'Irish',
     'Americano',

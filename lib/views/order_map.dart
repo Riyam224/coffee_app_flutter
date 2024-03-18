@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:coffee_app/views/order_view.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -97,9 +98,11 @@ class OrderMap extends StatelessWidget {
             // todo
             Container(
               width: double.infinity,
-              height: 238,
+              height: 290,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(25),
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30),
+                    topRight: Radius.circular(30)),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.brown.withOpacity(0.2),
@@ -111,7 +114,7 @@ class OrderMap extends StatelessWidget {
               ),
               child: Padding(
                 padding: const EdgeInsets.only(
-                    top: 15, bottom: 15, left: 10, right: 10),
+                    top: 20, bottom: 15, left: 10, right: 10),
                 child: Column(
                   children: [
                     Text(
@@ -123,7 +126,7 @@ class OrderMap extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      height: 5,
+                      height: 20,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -139,7 +142,7 @@ class OrderMap extends StatelessWidget {
                       ],
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 20,
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 20),
@@ -179,12 +182,12 @@ class OrderMap extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 30,
                     ),
                     // todo
-                    Container(
+                    SizedBox(
                       width: 330,
-                      height: 50,
+                      height: 60,
                       child: Row(
                         children: [
                           Image.asset('assets/images/Group 3147.png'),

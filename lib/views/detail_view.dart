@@ -52,7 +52,7 @@ class DetailView extends StatelessWidget {
                 width: 315,
                 height: 226,
                 child: Image.asset(
-                  'assets/images/Rectangle 1706.png',
+                  'assets/images/9.jpg',
                   fit: BoxFit.fill,
                 ),
                 decoration:
