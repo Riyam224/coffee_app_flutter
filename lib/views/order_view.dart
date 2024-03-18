@@ -208,7 +208,9 @@ class _OrderViewState extends State<OrderView> {
                         children: [
                           ElevatedButton(
                             onPressed: () {
-                              quantity--;
+                              setState(() {
+                                quantity--;
+                              });
                             },
                             child: Icon(
                               Icons.remove,

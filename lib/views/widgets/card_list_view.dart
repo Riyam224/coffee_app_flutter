@@ -1,3 +1,4 @@
+import 'package:coffee_app/views/coffee_card_view.dart';
 import 'package:coffee_app/views/widgets/coffee_card_view.dart';
 import 'package:flutter/material.dart';
 

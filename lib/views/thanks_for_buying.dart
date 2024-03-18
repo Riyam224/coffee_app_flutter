@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, sized_box_for_whitespace
 
+import 'package:coffee_app/views/splash_view.dart';
 import 'package:flutter/material.dart';
 
 class EnjoyIt extends StatelessWidget {
@@ -9,11 +10,15 @@ class EnjoyIt extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Container(
-          width: double.infinity,
-          child: Image.asset(
-            'assets/images/order complete enjoy it.png',
-            fit: BoxFit.cover,
+        body: GestureDetector(
+          onTap: () => Navigator.push(
+              context, MaterialPageRoute(builder: (context) => SplashView())),
+          child: Container(
+            width: double.infinity,
+            child: Image.asset(
+              'assets/images/order complete enjoy it.png',
+              fit: BoxFit.cover,
+            ),
           ),
         ),
       ),
